@@ -20,6 +20,10 @@ router.get('/', function(req,res){
 	res.sendFile(path.join(__dirname, '../../client/public/index.html'));
 });
 
+/*
+   This route is showing that you can set up a route and send any information that you want
+   It doesn't necessarily need to come from the database
+*/
 router.get('/whatever', function(req, res){
 	res.json({message: "I just wanted to say whatever bro"})
 })
