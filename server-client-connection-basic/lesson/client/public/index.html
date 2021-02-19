@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Full Stack</title>
+	<!--
+			remember we set the static files path to ./client on the server side
+			The server expects for the static files to be in there, and that is the starting
+			path to where your static files are, so when you reference them in your html, you start
+			the path to those files from where you set them on the server side, in this case the
+			start path is ./client, and the path to the .css file from ./client is ./public/styles.css
+ -->
+	<link rel="stylesheet" type="text/css" href="./public/styles.css">
+</head>
+<body>
+	<h1>Welcome to My Dog App</h1>
+	<h2>Here are all of the dogs</h2>
+	<div class="list-of-dogs">
+		<h3>Dog Breeds</h3>
+		<ul class="dogs-list"></ul>
+	</div>
+	<h2>Insert New Dog Breed</h2>
+	<form id="insert-dog-breed-form">
+		<label for="breed">Breed</label><br>
+		<input type="text" id="breed-input"/><br>
+		<label for="origin">Origin</label><br>
+		<input type="text" id="origin-input"/><br>
+		<label for="breed">Size</label><br>
+		<input type="text" id="size-input"/><br>
+		<label for="origin">Average Life Span</label><br>
+		<input type="text" id="average-life-span-input"/><br>
+		<input type="submit" value="Submit"/>
+	</form>
+	<div>
+		<h3>Dog Breed Added Successfully? <span id="successful-post"></span></h3>
+		<p id="error-message"></p>
+	</div>
+	<br><br>
+	<div class="random-additional-message-div">
+		<h2>Below is showing that you can send any information over. It doesn't need to come from the database</h2>
+		<h3 class="random-additional-message"></h3>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--
+		remember we set the static files path to ./client on the server side
+		The server expects for the static files to be in there, and that is the starting
+		path to where your static files are, so when you reference them in your html, you start
+		the path to those files from where you set them on the server side, in this case the
+		start path is ./client, and the path to the .js file from ./client is ./public/app.js
+-->
+<script src="./public/app.js"></script>
+</body>
+</html>
